@@ -900,6 +900,7 @@ public class Online extends AppCompatActivity implements OnMapReadyCallback , Lo
         }
         mAdapter.changeCursor(c);
     }
+    
     private void initCursor(){
         c = new MatrixCursor(new String[]{ BaseColumns._ID, "cityName" });
         for (int i=0; i<SUGGESTIONS.length; i++) {
@@ -908,6 +909,7 @@ public class Online extends AppCompatActivity implements OnMapReadyCallback , Lo
             //Log.d("SHAKIL", "yap filteringadded " + SUGGESTIONS[i]);
         }
     }
+
     private void filter(String query) {
         c = new MatrixCursor(new String[]{ BaseColumns._ID, "cityName" });
         for (int i=0; i<SUGGESTIONS.length; i++) {
@@ -917,6 +919,7 @@ public class Online extends AppCompatActivity implements OnMapReadyCallback , Lo
         }
         mAdapter.changeCursor(c);
     }
+
     private void filterData(String query) {
         int i=0;
         c = new MatrixCursor(new String[]{ BaseColumns._ID, "address", "lat", "longi", "bank", "atm_name"});
@@ -939,6 +942,7 @@ public class Online extends AppCompatActivity implements OnMapReadyCallback , Lo
         //Log.d("SHAKIL", "total similar found="+c.getCount());
         mAdapter.changeCursor(c);
     }
+
     private void addMarker () {
         if (cursor.moveToFirst()) {
             do{
@@ -968,6 +972,7 @@ public class Online extends AppCompatActivity implements OnMapReadyCallback , Lo
             } while (cursor.moveToNext());
         }
     }
+
     private void addMarkerOnAllChecked () {
         if (cursor.moveToFirst()) {
             do{
@@ -987,6 +992,7 @@ public class Online extends AppCompatActivity implements OnMapReadyCallback , Lo
             } while (cursor.moveToNext());
         }
     }
+
     private void removeMarker() {
         LatLng from = circle.getCenter();
         Log.d("SHAKIL", "now circle centre = "+from);

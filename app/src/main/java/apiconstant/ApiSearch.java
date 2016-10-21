@@ -5,5 +5,5 @@ package apiconstant;
  */
 
 public class ApiSearch {
-    public static String SEARCHVIEW_API = "http://softwindtech.com/androids-workable/pulldata.php";
+    public static String SEARCHVIEW_API = "http://softwindtech.com/androids-work/atmdata.php";
 }

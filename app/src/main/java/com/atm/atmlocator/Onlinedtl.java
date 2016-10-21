@@ -160,7 +160,7 @@ public class Onlinedtl extends AppCompatActivity implements OnStreetViewPanorama
         //streetViewPanoramaFragment.getStreetViewPanoramaAsync(this);
 
         // cursor loading
-        if(!forMyLoc)
+        if(!forMyLoc && !bname.equalsIgnoreCase("Current Position"))
             getSupportLoaderManager().initLoader(1, null, this);
 
         // getting users address city location detals and set to layout
@@ -244,7 +244,7 @@ public class Onlinedtl extends AppCompatActivity implements OnStreetViewPanorama
                 textv_state.setText( "State : "+state );
                 found = false;
             }
-            if(fabAtm_picMode){
+            if(fabAtm_picMode) {
                 new AtmPicAsync().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
             }
 
