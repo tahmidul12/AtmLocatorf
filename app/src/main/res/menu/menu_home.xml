@@ -1,0 +1,90 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.atm.atmlocator.Home" >
+
+
+
+   <!-- <item android:id="@+id/menu_dbbl"
+        android:title="DBBL"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_brack"
+        android:title="Brac Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_ab"
+        android:title="AB Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_city"
+        android:title="City Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+
+    <item android:id="@+id/menu_ebl"
+        android:title="EBL"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_exim"
+        android:title="Exim Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_hsbc"
+        android:title="HSBC"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_ific"
+        android:title="IFIC"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menu_one"
+        android:title="One Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_premier"
+        android:title="Premier Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_prime"
+        android:title="Prime Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_scb"
+        android:title="SCB"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_seb"
+        android:title="South-East Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+
+    <item android:id="@+id/menu_ucbl"
+        android:title="UCBL"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menu_dhaka"
+        android:title="Dhaka Bank"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menu_about"
+        android:title="About us"
+        android:orderInCategory="100"
+        app:showAsAction="never" />-->
+    <item android:id="@+id/action_bank"
+        android:title="Select Bank"
+        android:icon="@mipmap/select_bank"
+        android:orderInCategory="0"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:title="Search"/>
+</menu>

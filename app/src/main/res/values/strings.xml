@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AtmLocator</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_offline">AtmLocator</string>
+    <string name="API_KEY">AIzaSyBwelRv3SDaXh4oJw-tJFfpJZlV9FHnzDI</string>
+    <string name="title_activity_offlinedtl"></string>
+    <string name="Offline_Bank_Spinner_Prompt">Select Bank</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string-array name="allBankName">
+        <item>All</item>
+        <item>DBBL</item>
+        <item>Brac Bank</item>
+        <item>AB Bank</item>
+        <item>City Bank</item>
+        <item>EBL</item>
+        <item>Exim Bank</item>
+        <item>HSBC</item>
+        <item>IFIC Bank</item>
+        <item>One Bank</item>
+        <item>Premier Bank</item>
+        <item>Prime Bank</item>
+        <item>SCB</item>
+        <item>UCBL</item>
+        <item>South-East Bank</item>
+    </string-array>
+    <string name="title_activity_onlinedtl">ATM Details</string>
+</resources>

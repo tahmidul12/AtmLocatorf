@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads = "http://schemas.android.com/apk/res-auto"
+    xmlns:map = "http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="5dp"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/ToolBarStyle"
+            app:theme="@style/ToolBarStyle"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:weightSum="10"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:weightSum="10"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:visibility="gone"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:text="@string/app_name"/>
+            <FrameLayout
+                android:id="@+id/framev_gmap"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10">
+
+            <RelativeLayout
+                android:id="@+id/relateV"
+                android:layout_width="match_parent"
+                android:layout_margin="0dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="0.0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0.5dp"
+                android:background="@drawable/map_back"
+                >
+                <com.atm.atmlocator.MapWrapperLayout
+                    android:id="@+id/map_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight = "2">
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:name="com.google.android.gms.maps.MapFragment"
+                    android:id="@+id/map"
+                    />
+                </com.atm.atmlocator.MapWrapperLayout>
+                <ImageButton
+                    android:id="@+id/imButtonDir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/map_relative_layout"
+                    android:src="@mipmap/drbtn"
+                    android:background="@android:color/transparent"
+                    android:visibility="invisible"
+                    android:layout_marginRight="-43dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_alignParentRight="true"/>
+                <SeekBar
+                    android:id="@+id/seekBarOnline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/map_relative_layout"
+                    android:alpha="0.5"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:layout_weight="1"
+                    android:layout_marginTop="0dp"/>
+
+            </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlmenu"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="145dp"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    >
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/tpWhiteColor"
+                        android:orientation="vertical">
+                        <CheckBox
+                            android:id="@+id/rb_all"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="All"/>
+                        <CheckBox
+                            android:id="@+id/rb_dbbl"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DBBL"/>
+                        <CheckBox
+                            android:id="@+id/rb_brac"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Brac Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_ific"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="IFIC Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_exim"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Exim Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_prime"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Prime Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_ab"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="AB Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_city"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="City Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_ebl"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="EBL"/>
+                        <CheckBox
+                            android:id="@+id/rb_hsbc"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="HSBC"/>
+                        <CheckBox
+                            android:id="@+id/rb_one"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="One Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_premier"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Premier Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_scb"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SCB"/>
+                        <CheckBox
+                            android:id="@+id/rb_ucbl"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="UCBL"/>
+                        <CheckBox
+                            android:id="@+id/rb_seb"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="South-East Bank"/>
+                        <CheckBox
+                            android:id="@+id/rb_dhaka"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dhaka Bank"/>
+                    </LinearLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </FrameLayout>
+            <!--<LinearLayout
+                android:id="@+id/linearv_add"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_weight="1.0">
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    ads:adSize = "BANNER"
+                    ads:adUnitId ="@string/banner_ad_unit_id">
+                </com.google.android.gms.ads.AdView>
+            </LinearLayout>-->
+            <!--
+                        <TextView
+
+                            android:id="@+id/textv_seekOnline"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:text="seekbar progress value"
+                            />
+                        <Button
+                            android:id="@+id/button1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:text="offline"
+                            />
+            -->
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearv_add"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_weight="3">
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                ads:adSize = "BANNER"
+                ads:adUnitId ="@string/banner_ad_unit_id">
+            </com.google.android.gms.ads.AdView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/myFabOnline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginBottom="0dp"
+        app:backgroundTint="#ffffff"
+        android:layout_gravity="left"
+        android:layout_above="@+id/map"
+        android:clickable="true"
+        android:src="@mipmap/offlinelogo"
+        app:fabSize="mini"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/myFabCurrentLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginBottom="0dp"
+        app:backgroundTint="#ffffff"
+        android:tint="@color/colorPrimary"
+        android:layout_gravity="right"
+        android:layout_above="@+id/map"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_mylocation"
+        app:fabSize="mini"
+        />
+
+</android.support.design.widget.CoordinatorLayout>
